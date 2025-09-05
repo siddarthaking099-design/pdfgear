@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Gears - Complete PDF Tools Suite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Diamond Background Elements -->
+    <div class="diamond-bg"></div>
+    <div class="diamond-bg"></div>
+    <div class="diamond-bg"></div>
+    <div class="diamond-bg"></div>
+    <div class="diamond-bg"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="icon-diamond">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <span>PDF Gears</span>
+            </div>
+            <nav class="nav">
+                <a href="#tools">Tools</a>
+                <a href="#about">About</a>
+                <a href="#footer">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Complete PDF Tools Suite</h1>
+            <p>Convert, merge, split, and manipulate PDF files with ease. <span class="diamond-accent"></span> All processing happens in your browser - secure and fast.</p>
+        </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <section id="tools" class="tools-section">
+        <div class="container">
+            <h2><span class="diamond-accent diamond-large"></span> PDF Tools <span class="diamond-accent diamond-large"></span></h2>
+            <div class="tools-grid">
+                <!-- Convert Tools -->
+                <div class="tool-category">
+                    <h3><div class="icon-diamond-small"><i class="fas fa-exchange-alt"></i></div> Convert</h3>
+                    <div class="tool-items">
+                        <div class="tool-card" data-tool="pdf-to-word">
+                            <div class="icon-diamond">
+                                <i class="fas fa-file-word"></i>
+                            </div>
+                            <span>PDF to Word</span>
+                        </div>
+                        <div class="tool-card" data-tool="pdf-to-excel">
+                            <div class="icon-diamond">
+                                <i class="fas fa-file-excel"></i>
+                            </div>
+                            <span>PDF to Excel</span>
+                        </div>
+                        <div class="tool-card" data-tool="pdf-to-image">
+                            <div class="icon-diamond">
+                                <i class="fas fa-file-image"></i>
+                            </div>
+                            <span>PDF to Image</span>
+                        </div>
+                        <div class="tool-card" data-tool="word-to-pdf">
+                            <div class="icon-diamond">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <span>Word to PDF</span>
+                        </div>
+                        <div class="tool-card" data-tool="excel-to-pdf">
+                            <div class="icon-diamond">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <span>Excel to PDF</span>
+                        </div>
+                        <div class="tool-card" data-tool="image-to-pdf">
+                            <div class="icon-diamond">
+                                <i class="fas fa-file-pdf"></i>
+                            </div>
+                            <span>Image to PDF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Organize Tools -->
+                <div class="tool-category">
+                    <h3><div class="icon-diamond-small"><i class="fas fa-layer-group"></i></div> Organize</h3>
+                    <div class="tool-items">
+                        <div class="tool-card" data-tool="merge-pdf">
+                            <div class="icon-diamond">
+                                <i class="fas fa-object-group"></i>
+                            </div>
+                            <span>Merge PDF</span>
+                        </div>
+                        <div class="tool-card" data-tool="split-pdf">
+                            <div class="icon-diamond">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <span>Split PDF</span>
+                        </div>
+                        <div class="tool-card" data-tool="rotate-pdf">
+                            <div class="icon-diamond">
+                                <i class="fas fa-redo"></i>
+                            </div>
+                            <span>Rotate PDF</span>
+                        </div>
+                        <div class="tool-card" data-tool="delete-pages">
+                            <div class="icon-diamond">
+                                <i class="fas fa-trash"></i>
+                            </div>
+                            <span>Delete Pages</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Optimize Tools -->
+                <div class="tool-category">
+                    <h3><div class="icon-diamond-small"><i class="fas fa-compress"></i></div> Optimize</h3>
+                    <div class="tool-items">
+                        <div class="tool-card" data-tool="compress-pdf">
+                            <div class="icon-diamond">
+                                <i class="fas fa-compress-arrows-alt"></i>
+                            </div>
+                            <span>Compress PDF</span>
+                        </div>
+                        <div class="tool-card" data-tool="unlock-pdf">
+                            <div class="icon-diamond">
+                                <i class="fas fa-unlock"></i>
+                            </div>
+                            <span>Unlock PDF</span>
+                        </div>
+                        <div class="tool-card" data-tool="protect-pdf">
+                            <div class="icon-diamond">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <span>Protect PDF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- File Processing Area -->
+    <section class="processing-area" id="processing-area" style="display: none;">
+        <div class="container">
+            <div class="processing-header">
+                <h3 id="tool-title">PDF Tool</h3>
+                <button class="close-btn" onclick="closeProcessing()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="file-upload-area" id="file-upload">
+                <div class="upload-zone" id="upload-zone">
+                    <div class="icon-diamond-large">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h4><span class="diamond-accent diamond-small"></span> Drop files here or click to browse <span class="diamond-accent diamond-small"></span></h4>
+                    <p>Supports PDF, Word, Excel, PowerPoint, and Image files</p>
+                    <input type="file" id="file-input" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.jpg,.jpeg,.png,.gif">
+                </div>
+            </div>
+
+            <div class="file-list" id="file-list" style="display: none;">
+                <h4><span class="diamond-accent diamond-small"></span> Selected Files</h4>
+                <div id="files-container"></div>
+                <div class="process-controls">
+                    <button class="btn-primary" id="process-btn">Process Files</button>
+                    <button class="btn-secondary" onclick="resetUpload()">Reset</button>
+                </div>
+            </div>
+
+            <div class="progress-area" id="progress-area" style="display: none;">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p id="progress-text">Processing...</p>
+            </div>
+
+            <div class="results-area" id="results-area" style="display: none;">
+                <h4><span class="diamond-accent diamond-small"></span> Download Results</h4>
+                <div id="download-links"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2><span class="diamond-accent diamond-large"></span> About PDF Gears <span class="diamond-accent diamond-large"></span></h2>
+            <div class="about-content">
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="icon-diamond-small">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Privacy & Security</h3>
+                        <ul>
+                            <li><strong>100% Client-Side Processing</strong> - No files uploaded to servers</li>
+                            <li><strong>No Data Collection</strong> - Your files never leave your device</li>
+                            <li><strong>Secure Processing</strong> - All operations in browser memory</li>
+                            <li><strong>No Registration</strong> - Use immediately without accounts</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="icon-diamond-small">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Technology Stack</h3>
+                        <ul>
+                            <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+)</li>
+                            <li><strong>PDF Processing:</strong> PDF-lib, PDF.js</li>
+                            <li><strong>UI/UX:</strong> Font Awesome, CSS Grid, Flexbox</li>
+                            <li><strong>File Handling:</strong> HTML5 File API, Drag & Drop</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="icon-diamond-small">
+                            <i class="fas fa-browser"></i>
+                        </div>
+                        <h3>Browser Compatibility</h3>
+                        <ul>
+                            <li><strong>Chrome</strong> 60+ ✅</li>
+                            <li><strong>Firefox</strong> 55+ ✅</li>
+                            <li><strong>Safari</strong> 12+ ✅</li>
+                            <li><strong>Edge</strong> 79+ ✅</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="icon-diamond-small">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Limitations</h3>
+                        <ul>
+                            <li><strong>File Size:</strong> Large files (>100MB) may cause issues</li>
+                            <li><strong>Complex Layouts:</strong> Some formatting may not preserve</li>
+                            <li><strong>Encrypted PDFs:</strong> Limited password support</li>
+                            <li><strong>Browser Memory:</strong> Very large files may exceed limits</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="features-overview">
+                    <h3><span class="diamond-accent diamond-small"></span> Complete Feature Set</h3>
+                    <div class="features-grid">
+                        <div class="feature-category">
+                            <h4>Convert Tools</h4>
+                            <div class="feature-list" id="convert-features"></div>
+                        </div>
+                        <div class="feature-category">
+                            <h4>Organize Tools</h4>
+                            <div class="feature-list" id="organize-features"></div>
+                        </div>
+                        <div class="feature-category">
+                            <h4>Optimize Tools</h4>
+                            <div class="feature-list" id="optimize-features"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="usage-guide">
+                    <h3><span class="diamond-accent diamond-small"></span> How to Use</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Select a Tool</h4>
+                                <p>Click on any tool card (e.g., "Merge PDF", "Split PDF")</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Upload Files</h4>
+                                <p>Drag & drop files or click to browse and select files</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Process Files</h4>
+                                <p>Click "Process Files" button and wait for completion</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Download Results</h4>
+                                <p>Download the processed files from the results panel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><span class="diamond-accent diamond-small"></span> PDF Gears</h4>
+                    <p>Complete PDF tools suite running entirely in your browser. Secure, fast, and private.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#tools">PDF Tools</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="https://github.com">GitHub</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li>Check browser console for errors</li>
+                        <li>Use supported browsers (Chrome, Firefox, Safari, Edge)</li>
+                        <li>Try smaller file sizes if issues occur</li>
+                        <li>Clear browser cache and retry</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PDF Gears. All rights reserved. | Privacy-focused PDF processing in your browser.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PDF-lib for client-side PDF processing -->
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    
+    <script src="pdf-processor.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
